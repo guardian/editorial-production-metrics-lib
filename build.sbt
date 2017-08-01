@@ -13,6 +13,20 @@ scmInfo :=  Some(ScmInfo(
   "scm:git:git@github.com:guardian/editorial-production-metrics-lib.git"
 ))
 
+
+sonatypeProfileName := "com.gu"
+
+pomExtra := (
+  <url>https://github.com/guardian/editorial-production-metrics-lib</url>
+    <developers>
+      <developer>
+        <id>susiecoleman</id>
+        <name>Susie Coleman</name>
+        <url>https://github.com/susiecoleman</url>
+      </developer>
+    </developers>
+  )
+
 licenses := Seq("Apache V2" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
 
 resolvers ++= Seq(
