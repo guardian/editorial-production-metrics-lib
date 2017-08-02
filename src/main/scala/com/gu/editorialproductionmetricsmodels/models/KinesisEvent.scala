@@ -1,9 +1,10 @@
 package com.gu.editorialproductionmetricsmodels.models
 
+import enumeratum.EnumEntry.Lowercase
 import enumeratum._
 import io.circe.Json
 
-sealed trait OriginatingSystem extends EnumEntry
+sealed trait OriginatingSystem extends EnumEntry with Lowercase
 case object OriginatingSystem extends Enum[OriginatingSystem] with CirceEnum[OriginatingSystem] {
   case object Composer extends OriginatingSystem
   case object InCopy extends OriginatingSystem
