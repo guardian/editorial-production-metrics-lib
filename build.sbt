@@ -35,9 +35,10 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "io.circe" %% "circe-parser" % "0.7.0",
-  "io.circe" %% "circe-generic" % "0.7.0",
-  "com.beachape" %% "enumeratum-circe" % "1.5.14"
+  "io.circe" %% "circe-parser" % "0.8.0",
+  "io.circe" %% "circe-generic" % "0.8.0",
+  "com.beachape" %% "enumeratum-circe" % "1.5.14",
+  "joda-time" % "joda-time" % "2.9.9"
 )
 
 lazy val root = project in file(".")
