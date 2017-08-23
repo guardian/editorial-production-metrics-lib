@@ -37,5 +37,5 @@ object MetricOpt {
 
   // Because this lib is using Circe, but apps that use it might be using play-json, we've provided this
   // toJsonString method to allow parsing with the correct one on the app side.
-  def toJsonString(metricOpt: MetricOpt): String = metricOpt.asJson.asString.getOrElse("")
+  def toJsonString(metricOpt: MetricOpt): String = metricOpt.asJson.noSpaces
 }
