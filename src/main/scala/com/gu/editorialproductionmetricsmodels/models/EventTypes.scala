@@ -7,4 +7,4 @@ case class CapiData(
    creationDate: String,
    commissioningDesk: String,
    originatingSystem: OriginatingSystem,
-   productionOffice: Option[String])
+   productionOffice: Option[ProductionOffice])
