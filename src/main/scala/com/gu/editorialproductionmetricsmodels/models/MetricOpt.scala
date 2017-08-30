@@ -15,7 +15,8 @@ case class MetricOpt(
   inWorkflow: Option[Boolean] = None,
   inNewspaper: Option[Boolean] = None,
   creationTime: Option[DateTime] = None,
-  roundTrip: Option[Boolean] = None)
+  roundTrip: Option[Boolean] = None,
+  productionOffice: Option[String] = None)
 
 object MetricOpt {
   private val datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
