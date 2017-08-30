@@ -6,4 +6,5 @@ case class CapiData(
    newspaperBookTag: Option[String],
    creationDate: String,
    commissioningDesk: String,
-   originatingSystem: OriginatingSystem)
+   originatingSystem: OriginatingSystem,
+   productionOffice: Option[String])
