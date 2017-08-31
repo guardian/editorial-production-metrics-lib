@@ -12,6 +12,15 @@ case object OriginatingSystem extends Enum[OriginatingSystem] with CirceEnum[Ori
   val values = findValues
 }
 
+sealed trait ProductionOffice extends EnumEntry with Lowercase
+case object ProductionOffice extends Enum[ProductionOffice] with CirceEnum[ProductionOffice] {
+  case object Uk extends ProductionOffice
+  case object Us extends ProductionOffice
+  case object Aus extends ProductionOffice
+
+  val values = findValues
+}
+
 sealed trait EventType extends EnumEntry
 case object EventType extends Enum[EventType] with CirceEnum[EventType] {
   case object CreatedContent extends EventType
