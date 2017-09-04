@@ -12,10 +12,10 @@ case class MetricOpt(
   storyBundleId: Option[String] = None,
   commissioningDesk: Option[String] = None,
   userDesk: Option[String] = None,
-  inWorkflow: Option[Boolean] = None,
-  inNewspaper: Option[Boolean] = None,
+  inWorkflow: Option[Boolean] = Some(false),
+  inNewspaper: Option[Boolean] = Some(false),
   creationTime: Option[DateTime] = None,
-  roundTrip: Option[Boolean] = None,
+  roundTrip: Option[Boolean] = Some(false),
   productionOffice: Option[ProductionOffice] = None)
 
 object MetricOpt {
