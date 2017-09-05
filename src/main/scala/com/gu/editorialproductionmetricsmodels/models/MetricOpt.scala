@@ -15,7 +15,7 @@ case class MetricOpt(
   inWorkflow: Option[Boolean] = Some(false),
   inNewspaper: Option[Boolean] = Some(false),
   creationTime: Option[DateTime] = None,
-  publicationTime: Option[DateTime] = None,
+  firstPublicationTime: Option[DateTime] = None,
   roundTrip: Option[Boolean] = Some(false),
   productionOffice: Option[ProductionOffice] = None)
 
