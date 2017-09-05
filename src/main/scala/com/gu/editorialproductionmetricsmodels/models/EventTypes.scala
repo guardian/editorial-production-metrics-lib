@@ -7,6 +7,7 @@ case class CapiData(
    storyBundleId: Option[String],
    newspaperBookTag: Option[String],
    creationDate: String,
+   firstPublicationDate: String,
    commissioningDesk: String,
    originatingSystem: OriginatingSystem,
    productionOffice: Option[ProductionOffice])
