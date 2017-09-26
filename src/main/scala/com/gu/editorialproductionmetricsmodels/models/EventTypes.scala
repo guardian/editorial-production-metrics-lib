@@ -16,7 +16,7 @@ case class CapiData(
 
 case class ForkData(
    time: DateTime,
-   timeFromPublication: Long,
+   timeToPublication: Int,
    printDetails: PrintDetails,
    digitalDetails: DigitalDetails)
 
@@ -39,9 +39,11 @@ case class DigitalDetails(
    composerId: String,
    workflowStatus: String,
    newspaperBook: String,
-   newspaperBookSection: String)
+   newspaperBookSection: String,
+   creationTime: DateTime)
 
 object DigitalDetails {
+  import DateTimeHelper._
   implicit val digitalDetailsEncoder: Encoder[DigitalDetails] = deriveEncoder
   implicit val digitalDetailsDecoder: Decoder[DigitalDetails] = deriveDecoder
 }
