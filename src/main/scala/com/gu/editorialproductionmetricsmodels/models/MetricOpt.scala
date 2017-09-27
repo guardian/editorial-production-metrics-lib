@@ -17,12 +17,26 @@ case class MetricOpt(
   creationTime: Option[DateTime] = None,
   firstPublicationTime: Option[DateTime] = None,
   roundTrip: Option[Boolean] = None,
-  productionOffice: Option[ProductionOffice] = None)
+  productionOffice: Option[ProductionOffice] = None,
+  issueDate: Option[DateTime] = None,
+  bookSectionName: Option[String] = None,
+  bookSectionCode: Option[String] = None,
+  newspaperBook: Option[String] = None,
+  newspaperBookSection: Option[String] = None)
 
 object MetricOpt {
   import DateTimeHelper._
   implicit val metricEncoder: Encoder[MetricOpt] = deriveEncoder
   implicit val metricDecoder: Decoder[MetricOpt] = deriveDecoder
+
+  def apply(forkData: ForkData): MetricOpt = MetricOpt(
+    creationTime = Some(forkData.digitalDetails.creationTime),
+    issueDate = Some(forkData.printDetails.issueDate),
+    bookSectionName = Some(forkData.printDetails.bookSectionName),
+    bookSectionCode = Some(forkData.printDetails.bookSectionCode),
+    newspaperBook = Some(forkData.digitalDetails.newspaperBook),
+    newspaperBookSection = Some(forkData.digitalDetails.newspaperBookSection)
+  )
 
   // Because this lib is using Circe, but apps that use it might be using play-json, we've provided this
   // toJsonString method to allow parsing with the correct one on the app side.
