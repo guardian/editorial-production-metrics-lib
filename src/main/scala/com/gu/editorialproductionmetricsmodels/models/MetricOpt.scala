@@ -30,12 +30,13 @@ object MetricOpt {
   implicit val metricDecoder: Decoder[MetricOpt] = deriveDecoder
 
   def apply(forkData: ForkData): MetricOpt = MetricOpt(
+    composerId = Some(forkData.digitalDetails.composerId),
     creationTime = Some(forkData.digitalDetails.creationTime),
-    issueDate = Some(forkData.printDetails.issueDate),
+    issueDate = forkData.printDetails.issueDate,
     bookSectionName = Some(forkData.printDetails.bookSectionName),
     bookSectionCode = Some(forkData.printDetails.bookSectionCode),
-    newspaperBook = Some(forkData.digitalDetails.newspaperBook),
-    newspaperBookSection = Some(forkData.digitalDetails.newspaperBookSection)
+    newspaperBook = forkData.digitalDetails.newspaperBook,
+    newspaperBookSection = forkData.digitalDetails.newspaperBookSection
   )
 
   // Because this lib is using Circe, but apps that use it might be using play-json, we've provided this

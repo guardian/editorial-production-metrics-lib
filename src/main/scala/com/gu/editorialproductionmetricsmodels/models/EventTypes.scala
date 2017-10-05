@@ -25,7 +25,7 @@ case class PrintDetails(
    bookSectionCode: String,
    octopusStatus: String,
    forkApplication: String,
-   issueDate: DateTime,
+   issueDate: Option[DateTime],
    wordCount: Int)
 
 object PrintDetails {
@@ -37,9 +37,9 @@ object PrintDetails {
 case class DigitalDetails(
    revisionNumber: Int,
    composerId: String,
-   workflowStatus: String,
-   newspaperBook: String,
-   newspaperBookSection: String,
+   workflowStatus: Option[String],
+   newspaperBook: Option[String],
+   newspaperBookSection: Option[String],
    creationTime: DateTime)
 
 object DigitalDetails {
