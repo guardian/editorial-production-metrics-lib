@@ -22,7 +22,11 @@ case class MetricOpt(
   bookSectionName: Option[String] = None,
   bookSectionCode: Option[String] = None,
   newspaperBook: Option[String] = None,
-  newspaperBookSection: Option[String] = None)
+  newspaperBookSection: Option[String] = None,
+  commissionedWordCount: Option[Int] = None,
+  path: Option[String] = None,
+  wordCount: Option[Int] = None
+)
 
 object MetricOpt {
   import DateTimeHelper._
