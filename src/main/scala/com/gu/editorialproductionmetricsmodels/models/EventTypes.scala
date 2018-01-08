@@ -12,7 +12,10 @@ case class CapiData(
    firstPublicationDate: String,
    commissioningDesk: String,
    originatingSystem: OriginatingSystem,
-   productionOffice: Option[ProductionOffice])
+   productionOffice: Option[ProductionOffice],
+   commissionedWordCount: Option[Int],
+   path: String,
+   wordCount: Option[Int])
 
 case class ForkData(
    time: DateTime,
