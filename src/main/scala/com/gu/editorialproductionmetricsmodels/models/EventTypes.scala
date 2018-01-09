@@ -15,7 +15,8 @@ case class CapiData(
    productionOffice: Option[ProductionOffice],
    commissionedWordCount: Option[Int],
    path: String,
-   wordCount: Option[Int])
+   wordCount: Option[Int],
+   headline: Option[String])
 
 case class ForkData(
    time: DateTime,

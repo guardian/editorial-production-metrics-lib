@@ -25,7 +25,8 @@ case class MetricOpt(
   newspaperBookSection: Option[String] = None,
   commissionedWordCount: Option[Int] = None,
   path: Option[String] = None,
-  wordCount: Option[Int] = None
+  wordCount: Option[Int] = None,
+  headline: Option[String] = None
 )
 
 object MetricOpt {
