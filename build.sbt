@@ -34,6 +34,8 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("releases")
 )
 
+publishTo := sonatypePublishTo.value
+
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser" % "0.11.0",
   "io.circe" %% "circe-generic" % "0.11.0",
