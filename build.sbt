@@ -37,8 +37,8 @@ resolvers ++= Seq(
 publishTo := sonatypePublishTo.value
 
 libraryDependencies ++= Seq(
-  "io.circe" %% "circe-parser" % "0.12.0",
-  "io.circe" %% "circe-generic" % "0.12.0",
+  "io.circe" %% "circe-parser" % "0.12.1",
+  "io.circe" %% "circe-generic" % "0.12.1",
   "com.beachape" %% "enumeratum-circe" % "1.5.18",
   "joda-time" % "joda-time" % "2.10.1"
 )
