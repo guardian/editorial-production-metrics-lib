@@ -27,12 +27,9 @@ pomExtra := (
     </developers>
   )
 
-licenses := Seq("Apache V2" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
+licenses := Seq("Apache V2" -> url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
-resolvers ++= Seq(
-  "Guardian Github Releases" at "http://guardian.github.io/maven/repo-releases",
-  Resolver.sonatypeRepo("releases")
-)
+resolvers ++= Resolver.sonatypeOssRepos("releases")
 
 publishTo := sonatypePublishTo.value
 
