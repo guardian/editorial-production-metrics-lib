@@ -6,7 +6,7 @@ description := "Scala library of shared models for production metrics."
 
 organization := "com.gu"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.10"
 
 scmInfo :=  Some(ScmInfo(
   url("https://github.com/guardian/editorial-production-metrics-lib"),
@@ -34,10 +34,10 @@ resolvers ++= Resolver.sonatypeOssRepos("releases")
 publishTo := sonatypePublishTo.value
 
 libraryDependencies ++= Seq(
-  "io.circe" %% "circe-parser" % "0.12.1",
-  "io.circe" %% "circe-generic" % "0.12.1",
-  "com.beachape" %% "enumeratum-circe" % "1.5.18",
-  "joda-time" % "joda-time" % "2.10.1"
+  "io.circe" %% "circe-parser" % "0.14.3",
+  "io.circe" %% "circe-generic" % "0.14.3",
+  "com.beachape" %% "enumeratum-circe" % "1.7.2",
+  "joda-time" % "joda-time" % "2.12.2"
 )
 
 lazy val root = project in file(".")
